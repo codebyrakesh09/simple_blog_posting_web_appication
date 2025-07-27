@@ -23,7 +23,7 @@ This Django web application allows users to write, publish, and manage blog post
 ## Folder Structure
 
 The folder structure of the project is as follows:
-
+```
 basicNavbar/
 ├── basicNavbar/
 │   ├── __pycache__/
@@ -58,7 +58,7 @@ basicNavbar/
 │   └── views.py
 ├── db.sqlite3
 └── manage.py
-
+```
 
 ---
 
