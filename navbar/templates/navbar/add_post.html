@@ -1,0 +1,33 @@
+{% extends 'navbar/nav.html' %}
+{% block title %}Add Post{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-5 justify-container-center">
+    <h2>Add New Post</h2>
+
+    <form method="post" class="mt-4">
+      {% csrf_token %}
+      
+      <!-- Post Title Field -->
+      <div class="mb-4">
+        <label for="id_title" class="form-label">Post Title</label>
+        {{ form.title }}
+        <div class="form-text text-muted">Provide a catchy title for your post.</div>
+      </div>
+
+      <!-- Post Content Field -->
+      <div class="mb-4">
+        <label for="id_content" class="form-label">Post Content</label>
+        {{ form.content }}
+        <div class="form-text text-muted">Write the body of your post here.</div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary btn-lg w-100">Submit Post</button>
+      </div>
+    </form>
+
+{% endblock %}
+

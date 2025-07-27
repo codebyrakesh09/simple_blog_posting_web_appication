@@ -1,0 +1,55 @@
+{% extends 'navbar/nav.html' %}
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center mb-4">If you have any questions, suggestions, or just want to say hello, feel free to reach out using the form below!</p>
+
+        <!-- Displaying Messages -->
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Contact Form -->
+        <form method="POST" class="mt-4">
+            {% csrf_token %}
+
+            <!-- Name Field -->
+            <div class="mb-4">
+                <label for="id_name" class="form-label">Your Name</label>
+                {{ form.name }}
+                <div class="form-text text-muted">Please enter your full name.</div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-4">
+                <label for="id_email" class="form-label">Your Email</label>
+                {{ form.email }}
+                <div class="form-text text-muted">We will never share your email.</div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="mb-4">
+                <label for="id_message" class="form-label">Your Message</label>
+                {{ form.message }}
+                <div class="form-text text-muted">Write the message you'd like to send.</div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+            </div>
+        </form>
+
+        <!-- Displaying Contact Email with message -->
+        <div class="mt-4 text-center">
+            <p>If you'd prefer to email us directly, you can reach us at: 
+                <a href="mailto:rakesh.work.ai@gmail.com">rakesh.work.ai@gmail.com</a></p>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'navbar/nav.html' %}
+{% block title %} About {% endblock %}
+
+{% block content %}
+
+    <div class="container mt-5">
+        <h2>About Our Blog</h2>
+
+        <p>Welcome to our blog! This is your go-to platform where we share insightful and thought-provoking content across a range of topics including technology, lifestyle, travel, and much more.</p>
+
+        <p>Our mission is to provide a space for both readers and writers to engage with meaningful, well-researched, and creative articles. Whether you're here for the latest tech trends, travel inspiration, or personal growth advice, we've got something for you!</p>
+
+        <h4>Our Team</h4>
+        <p>Our blog is powered by a team of passionate writers, content creators, and curators, each dedicated to bringing fresh and unique perspectives. We believe in the power of storytelling to connect, inform, and inspire. Our contributors are always excited to share their experiences, knowledge, and insights with you.</p>
+
+        <h4>Join Us</h4>
+        <p>We're always on the lookout for new voices! If you're a writer, creator, or just someone with a great idea to share, we'd love to have you contribute to our community. Contact us today if you're interested in writing for our blog or simply want to know more about how you can get involved!</p>
+        <p>If you'd like to contribute to our blog, feel free to <a href="{% url 'contact' %}">contact us</a> for more information.</p>
+
+    </div>
+    
+{% endblock %}
